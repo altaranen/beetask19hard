@@ -1,0 +1,246 @@
+@import "fonts"
+body
+    width: 100%
+    background-color: #9789f9
+/* Layout */
+.ba-container
+    padding: 100px
+    padding-left: 20px
+    padding-right: 20px
+    max-width: 1200px
+.ba-pricing
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    align-items: center
+    position: relative
+    &__col
+        width: 31%
+        height: 621px
+        background-color: #f5f4f9
+        box-shadow: 2px 4px 59px 0px #7a6be7
+        z-index: 1
+.ba-pricing__col--center
+    margin: 20px
+    height: 701px
+    width: 34%
+    box-shadow: 2px 4px 59px #7a6be7
+    background-color: #f5f4f9
+    & a
+        background-color: #fd8d7b
+        margin-top: 0
+    & .ba-price__body
+        margin-top: 25px
+.ba-price
+    position: relative
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
+    align-items: center
+    justify-content: space-around
+    &__rate
+        font-family: $main-fonts
+        font-size: 60px
+        font-weight: 100
+    &__body
+        font-family: Roboto
+        font-size: 16px
+        font-weight: 300
+        line-height: 53px
+    &__logo
+        margin: 12% 0 8%  
+    &__circle
+        position: absolute
+        right: 10px
+        top: 10px
+        // z-index: 1
+        &--small
+            background-color: #fd8d7b
+            border-radius: 100%
+            height: 4px
+            width: 4px
+            margin-left: 55px
+        &--medium
+            background-color: #fd8d7b
+            height: 13px
+            width: 13px
+            border-radius: 100%
+            margin-left: 40px
+        &--big
+            width: 46px
+            height: 46px
+            color: #ffffff
+            font-family: $main-fonts
+            font-size: 24px
+            font-weight: 400
+            line-height: 36px
+            text-transform: uppercase
+            background-color: #fd8d7b
+            border-radius: 100%
+            text-align: center
+            padding: 8%
+button.Popular
+    position: absolute
+    color: #ffffff
+    font-family: $main-fonts
+    font-size: 16px
+    font-weight: 400
+    text-transform: uppercase
+    letter-spacing: 1.28px
+    width: 101px
+    height: 30px
+    background-color: #3b4040
+    text-align: center
+    top: 45px
+    right: 300px
+    border-radius: 120px
+button.Popular:before 
+    content: ''
+    border: 10px solid transparent
+    border-right: 10px solid #3b4040
+    position: absolute
+    left: -17px
+    top: 50%
+    margin-top: -10px
+li
+    list-style-type: none        
+h3
+    margin: 5% 0 4%
+.ba-price__rate:last-child
+    margin: 0 0 4%
+sup
+    font-size: 34px   
+sub
+    font-size: 18px
+h4
+    font-family: $main-fonts
+    font-size: 24px
+    font-weight: 400
+    margin: 0px
+    letter-spacing: 1.92px
+.ba-button, .submit
+    margin-top: 15%
+    width: 203px
+    height: 54px
+    box-shadow: 2px 4px 18px rgba(133, 192, 247, 0.31)
+    border-radius: 27px
+    background-color: #6fcffb
+    color: #ffffff
+    font-family: $main-fonts
+    font-size: 18px
+    font-weight: 400
+    line-height: 53px
+    letter-spacing: 1.44px
+    text-align: center
+    text-decoration: none
+    cursor: pointer
+.ba-discount
+    color: #a9a9a9
+    font-family: $second-fonts
+    font-size: 11px
+    font-weight: 300
+    line-height: 53px
+.ba-background
+    position: absolute
+    width: 100%
+    height: 66%
+    background-color: #ffffff
+    margin-top: 20%
+    border-radius: 50% 50% 0 0 / 25% 25% 0 0  
+    z-index: -5 
+
+/* Typography */
+a,
+input[type="submit"],
+input[type="button"],
+button
+    transition: 1s ease-in
+    color: #ffffff
+    border-color: none
+    background-color: #fd8d7b
+    opacity: 1
+input[type="submit"],
+input[type="button"],
+button,
+.ba-button
+    display: inline-block
+
+input[type="submit"]:hover,
+input[type="button"]:hover,
+button:hover,
+.ba-button:hover
+    background: yellow
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="tel"],
+textarea,
+select 
+    height: 30px
+    width: 360px
+    display: flex
+    flex-direction: column
+    transition: 1s ease-in
+    color: black
+    border-color: none
+    background-color: #00c4c4
+    opacity: 1
+    text-align: center
+    margin: 20px auto
+    font-size: 20px
+
+textarea
+    height: 200px
+select
+    margin: 0 auto
+    font-size: 20px
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus 
+    background: #fd8d7b
+    color: black
+#darkside 
+    background: grey
+    width: 100%
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+    display: none
+#modalwindow 
+    width: 500px
+    height: 750px
+    text-align: center
+    padding: 15px
+    border: 3px solid #0000cc
+    box-shadow: 2px 4px 59px 0px #7a6be7
+    border-radius: 10px
+    position: absolute
+    top: 0px
+    right: 0
+    bottom: 0
+    left: 0px
+    margin: auto
+    background: #e6e6e7
+    z-index: 10
+#darkside:target
+    display: block
+.submit 
+    display: inline-block
+    text-decoration: none
+    cursor:pointer
+    width: 203px
+    height: 54px
+    box-shadow: 2px 4px 18px rgba(133, 192, 247, 0.31)
+    border-radius: 27px
+    color: black
+    font-family: $main-fonts
+    background-color: yellow
+
+
